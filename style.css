@@ -465,3 +465,102 @@ body {
     height: 20px;
   }
 }
+/* Floating Hamburger Icon */
+#menu-toggle {
+  position: fixed;   /* stays fixed as page scrolls */
+  top: 18px;         /* adjust for exact top spacing */
+  left: 18px;        /* adjust for exact left spacing */
+  z-index: 9999;     /* always above page content */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  background: rgba(35,35,38,0.88); /* subtle background, optional */
+  border-radius: 8px;
+  box-shadow: 0 2px 14px #0001;
+  border: none;
+  outline: none;
+  transition: background 0.2s;
+}
+
+#menu-toggle:hover {
+  background: rgba(255,214,0,0.12); /* optional hover effect */
+}
+
+#menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 80%;
+  margin: 0 auto;
+  background: #ffd600;
+  border-radius: 3px;
+  transition: .22s;
+}
+
+/* Hamburger transforms to "X" when menu is open */
+body.menu-open #menu-toggle span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+body.menu-open #menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open #menu-toggle span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Side Drawer Menu */
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #232326;
+  box-shadow: 0px 0 00px #0003;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 68px 00px 22px 22px;
+  transform: translateX(-240px);
+  transition: transform 0.29s cubic-bezier(.85,.13,.32,1);
+}
+
+body.menu-open #side-menu {
+  transform: translateX(0);
+}
+
+/* Links inside the menu */
+#side-menu a {
+  color: #ffd600;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.11em;
+  margin-bottom: 14px;
+  padding: 6px 0;
+  transition: color .16s;
+  border-radius: 7px;
+}
+#side-menu a:hover {
+  color: #ff0000;
+  background: #ececec11;
+}
+
+/* Main UI shifts right when menu is open */
+body.menu-open #container,
+body.menu-open #header,
+body.menu-open .tg-float-btn,
+body.menu-open #theme-toggle {
+  transform: translateX(220px);
+  transition: transform 0.29s cubic-bezier(.85,.13,.32,1);
+}
+
+body:not(.menu-open) #container,
+body:not(.menu-open) #header,
+body:not(.menu-open) .tg-float-btn,
+body:not(.menu-open) #theme-toggle {
+  transform: none;
+}
