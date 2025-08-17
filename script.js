@@ -219,13 +219,3 @@ window.onload = function() {
   }
   updateThemeBtn();
 };
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('menu-toggle').onclick = function() {
-    document.body.classList.toggle('menu-open');
-  };
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') document.body.classList.remove('menu-open');
-  });
-});
-</script>
