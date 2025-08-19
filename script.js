@@ -1,5 +1,5 @@
 // SET YOUR M3U URL HERE
-const m3uUrl = "https://allinonereborn.fun/playlist/opplex190.m3u";
+const m3uUrl = "https://allinonereborn.fun/playlist/jiotv-ww141.m3u";
 
 let allChannels = [];
 let currentCategory = 'All';
