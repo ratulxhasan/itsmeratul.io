@@ -1,5 +1,5 @@
 
-const M3U_URL       = 'https://allinonereborn.fun/playlist/jiotv-ww141.m3u';
+const M3U_URL       = 'https://allinonereborn.fun/playlist/opplex190.m3u';
 const LS_KEY        = 'tv_channels_v3';
 const CATS_KEY      = 'tv_categories_v3';
 const TS_KEY        = 'tv_saved_time_v3';
