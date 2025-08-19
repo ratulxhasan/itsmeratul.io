@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Now Playing</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #000;    /* Pure black background, no effects */
+      color: #fff;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+    #channel-title {
+      font-size: 2em;
+      margin-top: 1.8em;
+      color: #00ff2d;               /* White text, no accents or glow */
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    #player-wrap {
+      margin: 2em auto 1.2em auto;
+      max-width: 600px;
+      padding: 0;
+    }
+    #player {
+      width: 100%;
+      min-height: auto;
+      background: #003009b9;
+      border: 1.2px solid #003009c4;  /* Small, light border around player */
+      border-radius: 10px;         /* Optional: subtle rounded corners */
+      font-family: "Times New Roman", Times, serif;
+      box-shadow: none;            /* No glow, no shadow */
+      outline: none;
+    }
+    #error-msg {
+      color: #ff0049;
+      font-size: 1.15em;
+      margin-top: 1em;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+    }
+    a {
+      color: #fafafa;
+      font-family: "Times New Roman", Times, serif;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #888;
+    }
+  
+.telegram-float-btn {
+    position: fixed;
+    left: 10px;
+    bottom: 18px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0.55em 1em;
+    background: #191d24;
+    border: 1px solid #29ffc6;
+    border-radius: 2.1em;
+    box-shadow: 0 2px 14px #29ffc66e;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: box-shadow 0.18s, transform 0.12s, background 0.17s;
+}
+.telegram-float-btn:hover {
+    background: #29ffc6;
+    color: #191d24;
+    box-shadow: 0 2px 30px #29ffc6d7;
+    transform: scale(1.045);
+    border-color: #fff;
+}
+.telegram-float-btn img {
+    height: 12px;
+    width: 12px;
+}
+.telegram-float-btn span {
+    color: #29ffc6;
+    font-weight: bold;
+    margin-left: 0.7em;
+}
+.telegram-float-btn:hover span {
+    color: #191d24;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <marquee behavior="scroll" direction="left" style="color:#ff000a; font-size:18px;">
+ ⚡ If channel failed to play, go back and refresh channel list .If player show GEO blocked. use vpn and retry .For more update Join Telegram channel
+</marquee>
+
+
+    <h1 id="channel-title">Channel</h1>
+    <div id="player-wrap">
+      <div id="player"></div>
+    </div>
+    <div id="error-msg"></div>
+    <!-- Clappr core + LevelSelector plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
+    <!-- Your custom script -->
+    <script src="player.js"></script>
+    <a href="https://t.me/itsmeratul" class="telegram-float-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="height:34px;width:34px;">
+    <span style="font-size:1em; margin-left:0.7em; color:#29ffc6; font-weight:bold;">Join Telegram</span>
+</a>
+
+</body>
+</html>
