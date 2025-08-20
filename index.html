@@ -12,7 +12,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
+ <!-- Neon Download Button -->
+<button
+  id="downloadBtn"
+  onclick="window.location.href='https://t.me/itsmeratul/572'"
+>
+  Download App
+</button>
+
+<style>
+/* Hide by default */
+#downloadBtn {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #fff;
+  background: #00027cc6;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 0 25px #00f6ff, 0 0 5px #003a44;
+  text-shadow: 0 0 7px #fff, 0 0 21px #00f6ff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#downloadBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px #00f6ff, 0 0 10px #003a44;
+}
+</style>
+
+<script>
+function isMobileBrowser() {
+  var ua = navigator.userAgent;
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+  var isAndroidWebView = !!ua.match(/wv|; wv\)/);
+  return isMobile && !isAndroidWebView && !ua.toLowerCase().includes("windows");
+}
+
+if (isMobileBrowser()) {
+  document.getElementById('downloadBtn').style.display = 'block';
+}
+</script>
+    
   <header>
        <meta name="viewport" content="width=device-width, initial-scale=1">
   <input id="search-box" type="text" placeholder="🔍 Search channels..." autocomplete="off" />
