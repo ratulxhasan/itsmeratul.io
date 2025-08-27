@@ -1,5 +1,5 @@
 // SET YOUR M3U URL HERE
-const m3uUrl = "https://allinonereborn.fun/playlist/jiotv-ww411.m3u";
+const m3uUrl = "https://raw.githubusercontent.com/DrSujonPaul/Sujon/6dc6a1d4eaa20a9239ae27d8e0f00182b60eeb47/iptv";
 
 let allChannels = [];
 let currentCategory = 'All';
